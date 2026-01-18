@@ -1,5 +1,2 @@
-print("homework")
-print("homework")
-print("homework")
-print("homework")
-v
+for _ in range(4):
+    print("homework")
