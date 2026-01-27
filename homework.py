@@ -1,2 +1,26 @@
-for _ in range(4):
-    print("homework")
+first_number= int(input("Введіть перше число: "))
+operation = input("Введіть дію (+, -, *, /): ")
+second_number = int(input("Введіть друге число: "))
+
+
+if operation == '+':
+    result = first_number + second_number
+    print("Результат:", result )
+elif operation == '-':
+    result = first_number - second_number
+    print("Результат:", result)
+elif operation == '*':
+    result = first_number * second_number
+    print("Результат: ", result)
+elif operation == '/':
+    if second_number == 0:
+        print("Ділити на нуль не можна!")
+    else:
+        result = first_number / second_number
+        print("Результат: ", result)
+
+print()
+print()
+
+
+print("Помилка: невідома операція!")
