@@ -1,7 +1,6 @@
-numbers_list = [1, 2, 3, 4, 5]
+list = [1, 2, 3, 4, 5,6,7,8,9,10]
 
-if len(numbers_list) > 1:
-    last_element = numbers_list.pop()
-    numbers_list.insert(0, last_element)
+mid_list = (len(list) + 1) // 2
+result = [list[:mid_list], list[mid_list:]]
 
-print(numbers_list)
+print(result)
