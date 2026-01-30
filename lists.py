@@ -1,6 +1,20 @@
-list = [1, 2, 3, 4, 5,6,7,8,9,10]
+# Написати програму, яка переміщає всі нулі у кінець списку.
+#
+# Ваше завдання — змінити список так, щоб усі нулі опинилися наприкінці списку.
+#
+# Порядок ненульових чисел має зберегтися!
+num = [0, 1, 0, 3, 12]
 
-mid_list = (len(list) + 1) // 2
-result = [list[:mid_list], list[mid_list:]]
+nozero = []
+zerocount = 0
 
-print(result)
+for x in num:
+    if x != 0:
+        nozero.append(x)
+    else:
+        zerocount += 1
+
+# Додаємо потрібну кількість нулів у кінець
+result = nozero + [0] * zerocount
+
+print(result) # [1, 3, 12, 0, 0]
