@@ -1,14 +1,17 @@
 import string
 
-letters_range = input("Введіть діапазон (напр. a-f): ")
+user_info = input("Введіть через дефіс дві літери: ").strip()
 
+if len(user_info ) >= 2 and ((user_info [0] == user_info [-1]) and user_info [0] in "\"'"):
+    user_info = user_info [1:-1]
 
-start_char = letters_range.split('-')
-end_char = letters_range.split('-')
+left_part, right_part = user_info .split('-', 1)
+left = left_part.strip()[0]
+right = right_part.strip()[0]
 
+letters = string.ascii_letters
+#print(letters)
+start = letters.index(left)
+end = letters.index(right)
 
-alphabet = string.ascii_letters
-start_index = alphabet.find(start_char)
-end_index = alphabet.find(end_char)
-
-print(alphabet[alphabet.index(start_char) : alphabet.index(end_char) + 1])
+print(letters[start:end + 1])
