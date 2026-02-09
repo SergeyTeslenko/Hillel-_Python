@@ -1,2 +1,3 @@
-square_side = input("Введите длину стороны квадрата: ")
-print(type(square_side))
+for d in range(5):
+    result = d
+    print(result)
